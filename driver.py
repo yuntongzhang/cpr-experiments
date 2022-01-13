@@ -59,8 +59,10 @@ def execute_command(command):
     (output, error) = process.communicate()
 
 
-def setup(script_path, script_name):
+def setup(script_path, script_name, deploy_path):
     global FILE_ERROR_LOG, CONF_DATA_PATH
+    cleanup_command = "rm -rf " + deploy_path # /data/...
+    execute_command(cleanup_command)
     print("\t[INFO] running script for setup")
     script_command = "{ cd " + script_path + "; bash " + script_name + " " + CONF_DATA_PATH + ";} 2> " + FILE_ERROR_LOG
     execute_command(script_command)
@@ -73,6 +75,8 @@ def evaluate(conf_path, bug_id):
     tool_command = "{ cd " + CONF_TOOL_PATH + ";" + CONF_TOOL_NAME + " --time-duration=30 --conf=" + conf_path + " "+ CONF_TOOL_PARAMS + ";} 2> " + FILE_ERROR_LOG
     execute_command(tool_command)
     exp_dir = DIR_RESULT + "/" + str(bug_id)
+    cleanup_command = "rm -rf " + exp_dir
+    execute_command(cleanup_command)
     mk_command = "mkdir " + exp_dir
     execute_command(mk_command)
     copy_output = "{ cp -rf " + CONF_TOOL_PATH + "/output/" + bug_id + " " + exp_dir + ";} 2> " + FILE_ERROR_LOG
@@ -167,7 +171,7 @@ def run():
         print("\t[META-DATA] project: " + subject_name)
         print("\t[META-DATA] bug ID: " + bug_name)
         if not os.path.isfile(deployed_conf_path):
-            setup(script_path, script_name)
+            setup(script_path, script_name, deploy_path)
         if not CONF_SETUP_ONLY:
             evaluate(deployed_conf_path, bug_name)
         index = index + 1
