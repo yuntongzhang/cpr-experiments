@@ -36,73 +36,73 @@
    "subject": "binutils"
  },
  {
-   "id": 15,
+   "id": 7,
    "bug_id": "CVE-2016-1838",
    "benchmark": "extractfix",
    "subject": "libxml2"
  },
  {
-   "id": 16,
+   "id": 8,
    "bug_id": "CVE-2016-1839",
    "benchmark": "extractfix",
    "subject": "libxml2"
  },
  {
-   "id": 17,
+   "id": 9,
    "bug_id": "CVE-2012-5134",
    "benchmark": "extractfix",
    "subject": "libxml2"
  },
  {
-   "id": 18,
+   "id": 10,
    "bug_id": "CVE-2017-5969",
    "benchmark": "extractfix",
    "subject": "libxml2"
  },
  {
-   "id": 20,
+   "id": 11,
    "bug_id": "CVE-2018-19664",
    "benchmark": "extractfix",
    "subject": "libjpeg"
  },
  {
-   "id": 21,
+   "id": 12,
    "bug_id": "CVE-2017-15232",
    "benchmark": "extractfix",
    "subject": "libjpeg"
  },
  {
-   "id": 22,
+   "id": 13,
    "bug_id": "CVE-2012-2806",
    "benchmark": "extractfix",
    "subject": "libjpeg"
  },
  {
-   "id": 23,
+   "id": 14,
    "bug_id": "bugzilla-26545",
    "benchmark": "extractfix",
    "subject": "coreutils"
  },
  {
-   "id": 24,
+   "id": 15,
    "bug_id": "gnubug-25003",
    "benchmark": "extractfix",
    "subject": "coreutils"
  },
  {
-   "id": 25,
+   "id": 16,
    "bug_id": "gnubug-25023",
    "benchmark": "extractfix",
    "subject": "coreutils"
  },
  {
-   "id": 26,
+   "id": 17,
    "bug_id": "bugzilla-19784",
    "benchmark": "extractfix",
    "subject": "coreutils"
  },
  {
-   "id": 27,
+   "id": 18,
    "bug_id": "CVE-2016-8691",
    "benchmark": "extractfix",
    "subject": "jasper"
