@@ -1,0 +1,204 @@
+Patch #1
+L290: (constant_a != initial_read)
+		Partition: 1
+			Constant: const_a
+			Range: 0 <= const_a <= 0
+			Dimension: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #2
+L290: (start != start)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #3
+L290: (bufsize == start)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #4
+L290: (bufsize < start)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #5
+L290: (bufsize <= start)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #6
+L290: (start < initial_read)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #7
+L290: (bufsize == initial_read)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #8
+L290: (bufsize < initial_read)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #9
+L290: (bufsize <= initial_read)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #10
+L290: (constant_a <= start)
+		Partition: 1
+			Constant: const_a
+			Range: 9 <= const_a <= 10
+			Dimension: 2
+		Patch Count: 2
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #11
+L290: (constant_a < start)
+		Partition: 1
+			Constant: const_a
+			Range: 8 <= const_a <= 10
+			Dimension: 3
+		Patch Count: 3
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #12
+L290: (start <= constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= -1
+			Dimension: 10
+		Patch Count: 10
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #13
+L290: (constant_a <= initial_read)
+		Partition: 1
+			Constant: const_a
+			Range: 1 <= const_a <= 10
+			Dimension: 10
+		Patch Count: 10
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #14
+L290: (initial_read <= constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= -1
+			Dimension: 10
+		Patch Count: 10
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #15
+L290: (start < constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 0
+			Dimension: 11
+		Patch Count: 11
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #16
+L290: (constant_a < initial_read)
+		Partition: 1
+			Constant: const_a
+			Range: 0 <= const_a <= 10
+			Dimension: 11
+		Patch Count: 11
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #17
+L290: (initial_read < constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 0
+			Dimension: 11
+		Patch Count: 11
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #18
+L290: (constant_a == start)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= -1
+			Dimension: 10
+		Partition: 2
+			Constant: const_a
+			Range: 9 <= const_a <= 10
+			Dimension: 2
+		Patch Count: 12
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #19
+L290: (constant_a == initial_read)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= -1
+			Dimension: 10
+		Partition: 2
+			Constant: const_a
+			Range: 1 <= const_a <= 10
+			Dimension: 10
+		Patch Count: 20
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #20
+L290: (constant_a == bufsize)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #21
+L290: (bufsize < constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #22
+L290: (bufsize <= constant_a)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 2
+		Is Under-approximating: False
+		Is Over-approximating: False
