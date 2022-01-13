@@ -170,8 +170,8 @@ def run():
         print("\t[META-DATA] benchmark: " + benchmark)
         print("\t[META-DATA] project: " + subject_name)
         print("\t[META-DATA] bug ID: " + bug_name)
-        if not os.path.isfile(deployed_conf_path):
-            setup(script_path, script_name, deploy_path)
+        # if not os.path.isfile(deployed_conf_path):
+        setup(script_path, script_name, deploy_path)
         if not CONF_SETUP_ONLY:
             evaluate(deployed_conf_path, bug_name)
         index = index + 1
