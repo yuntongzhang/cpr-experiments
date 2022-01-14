@@ -106,6 +106,18 @@
    "bug_id": "CVE-2016-8691",
    "benchmark": "extractfix",
    "subject": "jasper"
- }
+ },
+ {
+  "id": 19,
+  "bug_id": "CVE-2017-6965",
+  "benchmark": "vulnloc",
+  "subject": "binutils"
+},
+{
+  "id": 20,
+  "bug_id": "CVE-2017-14745",
+  "benchmark": "vulnloc",
+  "subject": "binutils"
+}
 
 ]
