@@ -118,6 +118,18 @@
   "bug_id": "CVE-2017-14745",
   "benchmark": "vulnloc",
   "subject": "binutils"
+},
+{
+  "id": 21,
+  "bug_id": "CVE-2016-9557",
+  "benchmark": "vulnloc",
+  "subject": "jasper"
+},
+{
+  "id": 22,
+  "bug_id": "CVE-2016-5844",
+  "benchmark": "vulnloc",
+  "subject": "libarchive"
 }
 
 ]
