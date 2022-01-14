@@ -130,6 +130,30 @@
   "bug_id": "CVE-2016-5844",
   "benchmark": "vulnloc",
   "subject": "libarchive"
+},
+{
+  "id": 23,
+  "bug_id": "CVE-2016-9264",
+  "benchmark": "vulnloc",
+  "subject": "libming"
+},
+{
+  "id": 24,
+  "bug_id": "CVE-2016-9532",
+  "benchmark": "vulnloc",
+  "subject": "libtiff"
+},
+{
+  "id": 25,
+  "bug_id": "CVE-2017-7599",
+  "benchmark": "vulnloc",
+  "subject": "libtiff"
+},
+{
+  "id": 26,
+  "bug_id": "CVE-2017-7600",
+  "benchmark": "vulnloc",
+  "subject": "libtiff"
 }
 
 ]
