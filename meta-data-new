@@ -1,0 +1,76 @@
+[
+    {
+     "id": 19,
+     "bug_id": "CVE-2017-6965",
+     "benchmark": "vulnloc",
+     "subject": "binutils"
+   },
+   {
+     "id": 20,
+     "bug_id": "CVE-2017-14745",
+     "benchmark": "vulnloc",
+     "subject": "binutils"
+   },
+   {
+     "id": 21,
+     "bug_id": "CVE-2016-9557",
+     "benchmark": "vulnloc",
+     "subject": "jasper"
+   },
+   {
+     "id": 22,
+     "bug_id": "CVE-2016-5844",
+     "benchmark": "vulnloc",
+     "subject": "libarchive"
+   },
+   {
+     "id": 23,
+     "bug_id": "CVE-2016-9264",
+     "benchmark": "vulnloc",
+     "subject": "libming"
+   },
+   {
+     "id": 24,
+     "bug_id": "CVE-2016-9532",
+     "benchmark": "vulnloc",
+     "subject": "libtiff"
+   },
+   {
+     "id": 25,
+     "bug_id": "CVE-2017-7599",
+     "benchmark": "vulnloc",
+     "subject": "libtiff"
+   },
+   {
+     "id": 26,
+     "bug_id": "CVE-2017-7600",
+     "benchmark": "vulnloc",
+     "subject": "libtiff"
+   },
+   {
+     "id": 27,
+     "bug_id": "CVE-2013-7437",
+     "benchmark": "vulnloc",
+     "subject": "potrace"
+   },
+   {
+     "id": 28,
+     "bug_id": "CVE-2017-5974",
+     "benchmark": "vulnloc",
+     "subject": "zziplib"
+   },
+   {
+     "id": 29,
+     "bug_id": "CVE-2017-5975",
+     "benchmark": "vulnloc",
+     "subject": "zziplib"
+   },
+   {
+     "id": 30,
+     "bug_id": "CVE-2017-5976",
+     "benchmark": "vulnloc",
+     "subject": "zziplib"
+   }
+   
+   ]
+   
