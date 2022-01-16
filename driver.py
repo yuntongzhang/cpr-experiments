@@ -1,3 +1,4 @@
+from re import sub
 import sys
 import json
 import subprocess
@@ -53,11 +54,16 @@ def create_directories():
         execute_command(create_command)
 
 
-def execute_command(command):
+def execute_command(command, mins=45):
     if CONF_DEBUG:
         print("\t[COMMAND]" + command)
     process = subprocess.Popen([command], stdout=subprocess.PIPE, shell=True)
-    (output, error) = process.communicate()
+    try:
+        (output, error) = process.communicate(timeout=mins*60)
+    except subprocess.TimeoutExpired:
+        print(f'[WARNING] The command {command} did not finish after 45 mins. Killing it.')
+        process.kill()
+        (output, error) = process.communicate()
 
 
 def setup(script_path, script_name, deploy_path):
