@@ -34,7 +34,7 @@ CONF_SETUP_ONLY = False
 # CONF_SKIP_LIST = ["2","13","15","16","21", "49"]
 CONF_SKIP_LIST = []
 
-FILE_META_DATA = "meta-data-old"
+FILE_META_DATA = "meta-data-temp"
 FILE_ERROR_LOG = "error-log"
 
 
