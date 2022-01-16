@@ -2,6 +2,7 @@ import sys
 import json
 import subprocess
 import os
+import time
 
 KEY_BUG_ID = "bug_id"
 KEY_BENCHMARK = "benchmark"
@@ -32,7 +33,7 @@ CONF_SETUP_ONLY = False
 # CONF_SKIP_LIST = ["2","13","15","16","21", "49"]
 CONF_SKIP_LIST = []
 
-FILE_META_DATA = "meta-data"
+FILE_META_DATA = "meta-data-old"
 FILE_ERROR_LOG = "error-log"
 
 
@@ -71,6 +72,9 @@ def setup(script_path, script_name, deploy_path):
 def evaluate(conf_path, bug_id):
     global CONF_TOOL_PARAMS, CONF_TOOL_PATH, CONF_TOOL_NAME, DIR_LOGS
     print("\t[INFO]running evaluation")
+    t = time.localtime()
+    current_time = time.strftime("%H:%M:%S", t)
+    print(f"\t[INFO]Start time is {current_time}")
     log_path = str(conf_path).replace(".conf", ".log")
     tool_command = "{ cd " + CONF_TOOL_PATH + ";" + CONF_TOOL_NAME + " --time-duration=30 --conf=" + conf_path + " "+ CONF_TOOL_PARAMS + ";} 2> " + FILE_ERROR_LOG
     execute_command(tool_command)
