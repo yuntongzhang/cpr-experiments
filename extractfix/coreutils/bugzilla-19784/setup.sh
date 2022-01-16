@@ -14,7 +14,7 @@ git checkout $commit_id
 
 
 sed -i '214,215d' src/make-prime-list.c
-sed -i '214i while((__trident_choice("L290", "bool", (int[]){size, i}, (char*[]){"size","i"}, 2, (int*[]){}, (char*[]){}, 0)) && sieve[++i] == 0)' src/make-prime-list.c
+sed -i '214i while((__trident_choice("L290", "bool", (int[]){size, i, nprimes, limit, p, j}, (char*[]){"size","i", "x", "y", "z", "l"}, 6, (int*[]){}, (char*[]){}, 0)) && sieve[++i] == 0)' src/make-prime-list.c
 sed -i '215i TRIDENT_OUTPUT("obs", "i32", size - i);\n' src/make-prime-list.c
 git add src/make-prime-list.c
 git commit -m "instrument trident"
