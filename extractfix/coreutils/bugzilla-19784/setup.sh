@@ -14,7 +14,7 @@ git checkout $commit_id
 
 
 sed -i '214,215d' src/make-prime-list.c
-sed -i '214i while((__trident_choice("L290", "bool", (int[]){size, i, nprimes, limit, p}, (char*[]){"size","i", "x", "y", "z"}, 6, (int*[]){}, (char*[]){}, 0)) && sieve[++i] == 0)' src/make-prime-list.c
+sed -i '214i while((__trident_choice("L290", "bool", (int[]){size, i, nprimes, limit, p}, (char*[]){"size","i", "x", "y", "z"}, 5, (int*[]){}, (char*[]){}, 0)) && sieve[++i] == 0)' src/make-prime-list.c
 sed -i '215i TRIDENT_OUTPUT("obs", "i32", size - i);\n' src/make-prime-list.c
 git add src/make-prime-list.c
 git commit -m "instrument trident"
@@ -28,5 +28,3 @@ cp repair.conf $dir_name
 cp spec.smt2 $dir_name
 cp t1.smt2 $dir_name
 cp -rf components $dir_name
-
-

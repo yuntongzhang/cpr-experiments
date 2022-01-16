@@ -17,7 +17,7 @@ git checkout $commit_id
 sed -i '1238i }' src/pr.c
 sed -i '1236d' src/pr.c
 sed -i '1236i TRIDENT_OUTPUT("obs", "i32", col_sep_length);\n' src/pr.c
-sed -i '1236i else if (!join_lines && *col_sep_string == \x27\\t\x27 && __trident_choice("L290", "bool", (int[]){col_sep_length,columns,number_of_files,lines_per_body,lines_per_page,lines_per_header}, (char*[]){"col_sep_length", "x", "y", "z", "l", "m"}, 6, (int*[]){}, (char*[]){}, 0)){' src/pr.c
+sed -i '1236i else if (!join_lines && *col_sep_string == \x27\\t\x27 && __trident_choice("L290", "bool", (int[]){col_sep_length,columns,number_of_files,lines_per_body,lines_per_page}, (char*[]){"col_sep_length", "x", "y", "z", "m"}, 5, (int*[]){}, (char*[]){}, 0)){' src/pr.c
 sed -i '97i #ifndef TRIDENT_OUTPUT\n#define TRIDENT_OUTPUT(id, typestr, value) value\n#endif' src/pr.c
 sed -i '97i #include <klee/klee.h>' src/pr.c
 git add src/pr.c
