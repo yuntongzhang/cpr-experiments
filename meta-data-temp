@@ -1,56 +1,45 @@
 [
- {
+  {
    "id": 1,
-   "bug_id": "CVE-2016-5321",
-   "benchmark": "extractfix",
-   "subject": "libtiff"
- },
- {
-   "id": 2,
-   "bug_id": "bugzilla-2633",
-   "benchmark": "extractfix",
-   "subject": "libtiff"
- },
- {
-   "id": 3,
-   "bug_id": "CVE-2016-10094",
-   "benchmark": "extractfix",
-   "subject": "libtiff"
- },
- {
-   "id": 4,
-   "bug_id": "CVE-2017-7601",
-   "benchmark": "extractfix",
-   "subject": "libtiff"
- },
- {
-   "id": 5,
-   "bug_id": "CVE-2017-7595",
-   "benchmark": "extractfix",
-   "subject": "libtiff"
- },
- {
-   "id": 6,
-   "bug_id": "CVE-2017-15025",
-   "benchmark": "extractfix",
+   "bug_id": "CVE-2017-6965",
+   "benchmark": "vulnloc",
    "subject": "binutils"
  },
  {
+  "id": 2,
+  "bug_id": "CVE-2016-9532",
+  "benchmark": "vulnloc",
+  "subject": "libtiff"
+  },
+  {
+    "id": 3,
+    "bug_id": "CVE-2017-7599",
+    "benchmark": "vulnloc",
+    "subject": "libtiff"
+  },
+  {
+    "id": 4,
+    "bug_id": "CVE-2017-7600",
+    "benchmark": "vulnloc",
+    "subject": "libtiff"
+  },
+ {
+   "id": 5,
+   "bug_id": "CVE-2017-5974",
+   "benchmark": "vulnloc",
+   "subject": "zziplib"
+ },
+ {
+   "id": 6,
+   "bug_id": "CVE-2017-5975",
+   "benchmark": "vulnloc",
+   "subject": "zziplib"
+ },
+ {
    "id": 7,
-   "bug_id": "CVE-2016-1838",
-   "benchmark": "extractfix",
-   "subject": "libxml2"
- },
- {
-   "id": 8,
-   "bug_id": "CVE-2016-1839",
-   "benchmark": "extractfix",
-   "subject": "libxml2"
- },
- {
-   "id": 9,
-   "bug_id": "CVE-2012-5134",
-   "benchmark": "extractfix",
-   "subject": "libxml2"
+   "bug_id": "CVE-2017-5976",
+   "benchmark": "vulnloc",
+   "subject": "zziplib"
  }
+
 ]
