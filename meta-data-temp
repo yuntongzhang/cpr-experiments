@@ -1,37 +1,25 @@
 [
   {
-   "id": 1,
-   "bug_id": "CVE-2017-6965",
-   "benchmark": "vulnloc",
-   "subject": "binutils"
- },
-  {
-    "id": 2,
-    "bug_id": "CVE-2017-7599",
-    "benchmark": "vulnloc",
-    "subject": "libtiff"
-  },
-  {
-    "id": 3,
+    "id": 1,
     "bug_id": "CVE-2017-7600",
     "benchmark": "vulnloc",
     "subject": "libtiff"
   },
+  {
+    "id": 2,
+    "bug_id": "CVE-2016-9264",
+    "benchmark": "vulnloc",
+    "subject": "libming"
+  },
  {
-   "id": 4,
+   "id": 3,
    "bug_id": "CVE-2017-5974",
    "benchmark": "vulnloc",
    "subject": "zziplib"
  },
  {
-   "id": 5,
+   "id": 4,
    "bug_id": "CVE-2017-5975",
-   "benchmark": "vulnloc",
-   "subject": "zziplib"
- },
- {
-   "id": 6,
-   "bug_id": "CVE-2017-5976",
    "benchmark": "vulnloc",
    "subject": "zziplib"
  }
