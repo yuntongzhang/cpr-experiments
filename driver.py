@@ -3,6 +3,7 @@ import sys
 import json
 import subprocess
 import os
+import signal
 import time
 
 KEY_BUG_ID = "bug_id"
@@ -34,7 +35,7 @@ CONF_SETUP_ONLY = False
 # CONF_SKIP_LIST = ["2","13","15","16","21", "49"]
 CONF_SKIP_LIST = []
 
-FILE_META_DATA = "meta-data-old"
+FILE_META_DATA = "meta-data-temp"
 FILE_ERROR_LOG = "error-log"
 
 
@@ -57,13 +58,14 @@ def create_directories():
 def execute_command(command, mins=45):
     if CONF_DEBUG:
         print("\t[COMMAND]" + command)
-    process = subprocess.Popen([command], stdout=subprocess.PIPE, shell=True)
+    process = subprocess.Popen([command], stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)
     try:
         (output, error) = process.communicate(timeout=mins*60)
     except subprocess.TimeoutExpired:
         print(f'[WARNING] The command {command} did not finish after 45 mins. Killing it.')
-        process.kill()
-        (output, error) = process.communicate()
+        # process.kill()
+        os.killpg(os.getpgid(process.pid), signal.SIGTERM)
+        # (output, error) = process.communicate()
 
 
 def setup(script_path, script_name, deploy_path):
