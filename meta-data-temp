@@ -1,15 +1,20 @@
 [
  {
    "id": 1,
-   "bug_id": "CVE-2017-5974",
-   "benchmark": "vulnloc",
-   "subject": "zziplib"
+   "bug_id": "CVE-2016-9273",
+   "benchmark": "extractfix",
+   "subject": "libtiff"
  },
  {
    "id": 2,
-   "bug_id": "CVE-2017-5975",
+   "bug_id": "CVE-2016-10092",
    "benchmark": "vulnloc",
-   "subject": "zziplib"
+   "subject": "libtiff"
+ },
+ {
+   "id": 3,
+   "bug_id": "CVE-2016-10272",
+   "benchmark": "vulnloc",
+   "subject": "libtiff"
  }
-
 ]
