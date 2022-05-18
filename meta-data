@@ -196,5 +196,11 @@
         "bug_id": "CVE-2016-10272",
         "benchmark": "vulnloc",
         "subject": "libtiff"
+    },
+    {
+        "id": 34,
+        "bug_id": "bugzilla-2611",
+        "benchmark": "extractfix",
+        "subject": "libtiff"
     }
 ]

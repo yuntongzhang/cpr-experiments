@@ -23,7 +23,7 @@ git commit -m 'replace fabs with proxy function'
 make CFLAGS="-ltrident_proxy -L/CPR/lib" -j32
 
 sed -i '816i TRIDENT_OUTPUT("obs", "i32", sp->bytes_per_line);' libtiff/tif_ojpeg.c
-sed -i '816i if(__trident_choice("L816", "bool", (int[]){sp->bytes_per_line, cc}, (char*[]){"x", "y"}, 2, (int*[]){}, (char*[]){}, 0)) return -1;\n' libtiff/tif_ojpeg.c
+sed -i '816i if(__trident_choice("L816", "bool", (int[]){sp->bytes_per_line, cc, sp->image_width, sp->image_length, sp->samples_per_pixel}, (char*[]){"x", "y", "z", "m", "n"}, 5, (int*[]){}, (char*[]){}, 0)) return -1;\n' libtiff/tif_ojpeg.c
 sed -i '178i #ifndef TRIDENT_OUTPUT\n#define TRIDENT_OUTPUT(id, typestr, value) value\n#endif\n' libtiff/tif_ojpeg.c
 git add libtiff/tif_ojpeg.c
 git commit -m "instrument trident"
@@ -35,4 +35,3 @@ cp spec.smt2 $dir_name
 cp t1.smt2 $dir_name
 cp -rf components $dir_name
 cp exploit.tif $dir_name
-
