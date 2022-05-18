@@ -54,12 +54,13 @@ To run CPR on the experiment benchmark, the following steps were performed:
 
 ```bash
 docker pull rshariffdeen/cpr:experiments-cpr
-docker run --name cpr-container -it cpr bash
+docker run --name cpr-container -it rshariffdeen/cpr:experiments-cpr bash
 ```
 
 2. Inside the container, clone this repository:
 
 ```bash
+cd /
 git clone https://github.com/yuntongzhang/cpr-experiments.git
 cd cpr-experiments
 ```
@@ -69,3 +70,10 @@ cd cpr-experiments
 ```
 python3.7 driver.py
 ```
+
+To run individual vulnerability, do:
+
+```
+python3.7 driver.py --bug-id=X
+```
+where `X` is the `id` field from `meta-data` file.
