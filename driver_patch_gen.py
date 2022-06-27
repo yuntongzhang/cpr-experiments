@@ -25,9 +25,9 @@ def load_experiments():
 
 
 def execute_command(command, mins=45):
-    process = subprocess.Popen([command], stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)
+    process = subprocess.Popen([command], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True, preexec_fn=os.setsid)
     try:
-        output, error = process.communicate(timeout=mins*10)
+        output, error = process.communicate(timeout=mins*10,)
     except subprocess.TimeoutExpired:
         print(f'[WARNING] The command {command} did not finish after 10 mins. Killing it.')
         os.killpg(os.getpgid(process.pid), signal.SIGTERM)
@@ -36,7 +36,7 @@ def execute_command(command, mins=45):
 def patch_gen(script_path, script_name, deploy_path):
     cleanup_command = "rm -rf " + deploy_path # /data/...
     execute_command(cleanup_command)
-    print("\t[INFO] running script for patch_gen")
+    # print("\t[INFO] running script for patch_gen")
     script_command = "{ cd " + script_path + "; bash " + script_name + " " + DIR_DATA + " " + DIR_RESULT + ";} "
     execute_command(script_command)
 
