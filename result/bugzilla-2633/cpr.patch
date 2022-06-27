@@ -1,0 +1,10 @@
+--- backup.c	2022-06-27 03:05:13.260442995 +0000
++++ tools/tiff2ps.c	2022-06-27 03:05:13.276443130 +0000
+@@ -2438,6 +2438,7 @@
+ 	tsize_t cc;
+ 	unsigned char *tf_buf;
+ 	unsigned char *cp, c;
++if(h == 1) return;
+ 
+ 	(void) w;
+ 	tf_buf = (unsigned char *) _TIFFmalloc(tf_bytesperrow);

@@ -1,0 +1,12 @@
+--- backup.c	2022-06-27 03:09:29.721553836 +0000
++++ src/make-prime-list.c	2022-06-27 03:09:29.729553828 +0000
+@@ -211,8 +211,7 @@
+       for (j = (p*p - 3)/2; j < size; j+= p)
+         sieve[j] = 0;
+ 
+-      while (i < size && sieve[++i] == 0)
+-        ;
++while((p == limit) && sieve[++i] == 0)
+     }
+ 
+   output_primes (prime_list, nprimes);

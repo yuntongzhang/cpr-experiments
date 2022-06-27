@@ -1,0 +1,11 @@
+--- backup.c	2022-06-27 03:09:11.953574744 +0000
++++ src/split.c	2022-06-27 03:09:11.977574712 +0000
+@@ -982,7 +982,7 @@
+   start = (k - 1) * (file_size / n);
+   end = (k == n) ? file_size : k * (file_size / n);
+ 
+-  if (initial_read != SIZE_MAX || start < initial_read)
++if(10 <= k)
+     {
+       memmove (buf, buf + start, initial_read - start);
+       initial_read -= start;

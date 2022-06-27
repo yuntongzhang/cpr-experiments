@@ -1,0 +1,13 @@
+--- backup.c	2022-06-27 03:09:20.901563628 +0000
++++ src/pr.c	2022-06-27 03:09:20.953563566 +0000
+@@ -1233,8 +1233,9 @@
+         }
+       /* It's rather pointless to define a TAB separator with column
+          alignment */
+-      else if (!join_lines && *col_sep_string == '\t')
++else if (!join_lines && *col_sep_string == '\t' && lines_per_page == lines_per_body){
+         col_sep_string = column_separator;
++}
+ 
+       truncate_lines = true;
+       tabify_output = true;
