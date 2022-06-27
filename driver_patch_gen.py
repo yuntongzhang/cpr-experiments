@@ -41,9 +41,23 @@ def patch_gen(script_path, script_name, deploy_path):
     execute_command(script_command)
 
 
+def check_result(bug_name):
+    result_path = os.path.join(DIR_RESULT, bug_name, "cpr.patch")
+    if os.path.isfile(result_path):
+        ok = True
+        with open(result_path, "r") as f:
+            print(f.read())
+    else:
+        ok = False
+        print("[WARNING] Check result failed for " + bug_name + "\n")
+
+    return ok
+
+
 def main():
     print("[DRIVER] Running experiment driver")
     load_experiments()
+    success_count = 0
     for experiment_item in EXPERIMENT_ITEMS:
         bug_name = str(experiment_item[KEY_BUG_ID])
         subject_name = str(experiment_item[KEY_SUBJECT])
@@ -58,6 +72,11 @@ def main():
 
         if os.path.isfile(os.path.join(script_path, script_name)): # has patch_gen.sh existing
             patch_gen(script_path, script_name, deploy_path)
+            is_ok = check_result(bug_name)
+            if is_ok:
+                success_count += 1
+
+    print("[DRIVER] Finished. Obtained patches for " + str(success_count) + " experiments.")
 
 
 if __name__ == "__main__":
