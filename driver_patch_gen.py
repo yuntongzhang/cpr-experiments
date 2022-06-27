@@ -54,11 +54,9 @@ def main():
         script_path = os.path.join(DIR_MAIN, directory_name)
         deploy_path = os.path.join(DIR_DATA, directory_name)
 
-        print("\t[META-DATA] benchmark: " + benchmark)
-        print("\t[META-DATA] project: " + subject_name)
-        print("\t[META-DATA] bug ID: " + bug_name)
+        print("[DRIVER] Running experiment " + benchmark + " : " + subject_name + " : " + bug_name + "\n---------------------")
 
-        if os.path.isfile(script_path): # has patch_gen.sh existing
+        if os.path.isfile(os.path.join(script_path, script_name)): # has patch_gen.sh existing
             patch_gen(script_path, script_name, deploy_path)
 
 
