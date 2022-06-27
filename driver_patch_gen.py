@@ -37,7 +37,7 @@ def patch_gen(script_path, script_name, deploy_path):
     cleanup_command = "rm -rf " + deploy_path # /data/...
     execute_command(cleanup_command)
     print("\t[INFO] running script for patch_gen")
-    script_command = "{ cd " + script_path + "; bash " + script_name + " " + DIR_DATA + DIR_RESULT + ";} "
+    script_command = "{ cd " + script_path + "; bash " + script_name + " " + DIR_DATA + " " + DIR_RESULT + ";} "
     execute_command(script_command)
 
 
@@ -54,11 +54,15 @@ def main():
         script_path = os.path.join(DIR_MAIN, directory_name)
         deploy_path = os.path.join(DIR_DATA, directory_name)
 
-        print("[DRIVER] Running experiment " + benchmark + " : " + subject_name + " : " + bug_name + "\n---------------------")
+        print("\n----------------\n[DRIVER] Running experiment " + benchmark + " : " + subject_name + " : " + bug_name + "\n---------------------\n")
 
         if os.path.isfile(os.path.join(script_path, script_name)): # has patch_gen.sh existing
             patch_gen(script_path, script_name, deploy_path)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt as e:
+        print("[DRIVER] Program Interrupted by User")
+        exit()
