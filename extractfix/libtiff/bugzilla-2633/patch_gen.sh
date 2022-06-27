@@ -15,6 +15,8 @@ git checkout $commit_id
 fix_file=tools/tiff2ps.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '2441i if(h == 1) return;' tools/tiff2ps.c
 
 diff -u $backup_file $fix_file > $2/$bug_id/cpr.patch

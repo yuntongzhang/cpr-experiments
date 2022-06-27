@@ -14,6 +14,8 @@ git checkout $commit_id
 fix_file=libtiff/tif_ojpeg.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '816i if(sp->bytes_per_line == 0) return -1;\n' libtiff/tif_ojpeg.c
 
 diff -u $backup_file $fix_file > $2/$bug_id/cpr.patch

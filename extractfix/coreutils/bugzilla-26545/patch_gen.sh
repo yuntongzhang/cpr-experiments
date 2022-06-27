@@ -15,6 +15,8 @@ git checkout $commit_id
 fix_file=src/shred.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '290d' src/shred.c
 sed -i '290i for(i = 3; (bits < r); i *= 2)' src/shred.c
 

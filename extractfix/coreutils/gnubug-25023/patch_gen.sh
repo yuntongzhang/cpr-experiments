@@ -16,6 +16,8 @@ git checkout $commit_id
 fix_file=src/pr.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '1238i }' src/pr.c
 sed -i '1236d' src/pr.c
 sed -i '1236i else if (!join_lines && *col_sep_string == \x27\\t\x27 && lines_per_page == lines_per_body){' src/pr.c

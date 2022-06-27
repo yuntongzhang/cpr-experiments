@@ -16,6 +16,8 @@ git checkout $commit_id
 fix_file=src/split.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '985d' src/split.c
 sed -i '985i if(10 <= k)' src/split.c
 

@@ -15,6 +15,8 @@ git checkout $commit_id
 fix_file=src/make-prime-list.c
 backup_file=backup.c
 
+cp $fix_file $backup_file
+
 sed -i '214,215d' src/make-prime-list.c
 sed -i '214i while((p == limit) && sieve[++i] == 0)' src/make-prime-list.c
 
